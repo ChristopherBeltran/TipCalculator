@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput } from 'react-native';
+import Slider from '@react-native-community/slider';
 import styles from './TipCalculator.styles';
 
 const TipCalculator: React.FC = () => {
@@ -29,14 +30,21 @@ const TipCalculator: React.FC = () => {
         value={totalAmount}
         onChangeText={setTotalAmount}
       />
-      <TextInput
-        style={styles.input}
-        placeholder="Tip Percentage"
-        keyboardType="numeric"
-        value={tipPercentage.toString()}
-        onChangeText={text => setTipPercentage(parseFloat(text) || 0)}
+      <Text style={styles.percentageText}>
+        Tip Percentage: {tipPercentage}%
+      </Text>
+      <Slider
+        style={styles.slider}
+        minimumValue={0}
+        maximumValue={30}
+        step={1}
+        value={tipPercentage}
+        onValueChange={value => setTipPercentage(value)}
+        minimumTrackTintColor="#1fb28a"
+        maximumTrackTintColor="#d3d3d3"
+        thumbTintColor="#b9e4c9"
       />
-      <Text style={styles.text}>Tip Amount: ${calculateTip()}</Text>
+      <Text style={styles.tipAmountText}>Tip Amount: ${calculateTip()}</Text>
     </View>
   );
 };
