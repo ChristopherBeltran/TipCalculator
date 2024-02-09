@@ -71,8 +71,14 @@ export const styles = StyleSheet.create({
     elevation: 5,
     marginBottom: 20,
   },
-  percentageText: {
+  percentageLabel: {
+    textAlign: 'center',
+    fontWeight: 'bold',
     marginTop: 60,
-    marginBottom: 10,
+    marginBottom: 8,
+  },
+  percentageValue: {
+    textAlign: 'center', // Center the percentage value below the slider
+    marginTop: 8, // Space below the slider
   },
 });

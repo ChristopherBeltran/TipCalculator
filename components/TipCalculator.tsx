@@ -33,8 +33,8 @@ const TipCalculator: React.FC = () => {
           onChangeText={setTotalAmount}
         />
       </View>
-      <Text style={[baseTextStyle, styles.percentageText]}>
-        Tip Percentage: {tipPercentage}%
+      <Text style={[baseTextStyle, styles.percentageLabel]}>
+        Tip Percentage %
       </Text>
       <View style={styles.sliderShadow}>
         <Slider
@@ -49,6 +49,9 @@ const TipCalculator: React.FC = () => {
           thumbTintColor="#b9e4c9"
         />
       </View>
+      <Text style={[baseTextStyle, styles.percentageValue]}>
+        {tipPercentage}%
+      </Text>
       <View style={styles.tipAmountContainer}>
         <Text style={baseTextStyle}>Tip Amount:</Text>
         <Text style={[baseTextStyle, styles.tipAmountText]}>
