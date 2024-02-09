@@ -12,6 +12,8 @@ export default StyleSheet.create({
     padding: 10,
   },
   tipAmountContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     marginTop: 60,
     backgroundColor: '#1fb28a',
     borderWidth: 1,
@@ -24,10 +26,15 @@ export default StyleSheet.create({
     elevation: 10,
     padding: 10,
   },
+  tipLabelText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
   tipAmountText: {
     fontSize: 18,
     fontWeight: 'bold',
     color: '#000',
+    textAlign: 'right',
   },
   slider: {
     width: '100%',

@@ -47,7 +47,8 @@ const TipCalculator: React.FC = () => {
         />
       </View>
       <View style={styles.tipAmountContainer}>
-        <Text style={styles.tipAmountText}>Tip Amount: ${calculateTip()}</Text>
+        <Text style={styles.tipLabelText}>Tip Amount:</Text>
+        <Text style={styles.tipAmountText}>${calculateTip()}</Text>
       </View>
     </View>
   );
