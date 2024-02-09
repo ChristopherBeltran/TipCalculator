@@ -33,18 +33,22 @@ const TipCalculator: React.FC = () => {
       <Text style={styles.percentageText}>
         Tip Percentage: {tipPercentage}%
       </Text>
-      <Slider
-        style={styles.slider}
-        minimumValue={0}
-        maximumValue={30}
-        step={1}
-        value={tipPercentage}
-        onValueChange={value => setTipPercentage(value)}
-        minimumTrackTintColor="#1fb28a"
-        maximumTrackTintColor="#d3d3d3"
-        thumbTintColor="#b9e4c9"
-      />
-      <Text style={styles.tipAmountText}>Tip Amount: ${calculateTip()}</Text>
+      <View style={styles.sliderShadow}>
+        <Slider
+          style={styles.slider}
+          minimumValue={0}
+          maximumValue={30}
+          step={1}
+          value={tipPercentage}
+          onValueChange={value => setTipPercentage(value)}
+          minimumTrackTintColor="#1fb28a"
+          maximumTrackTintColor="#d3d3d3"
+          thumbTintColor="#b9e4c9"
+        />
+      </View>
+      <View style={styles.tipAmountContainer}>
+        <Text style={styles.tipAmountText}>Tip Amount: ${calculateTip()}</Text>
+      </View>
     </View>
   );
 };
