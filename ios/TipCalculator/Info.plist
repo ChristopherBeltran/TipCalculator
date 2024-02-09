@@ -48,5 +48,9 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Need camera access to take pictures of receipts</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Need photo library access to select pictures of receipts</string>
 </dict>
 </plist>
