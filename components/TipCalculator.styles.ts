@@ -1,16 +1,44 @@
 import { StyleSheet } from 'react-native';
 
-export default StyleSheet.create({
+export const baseTextStyle = {
+  fontSize: 18,
+  fontWeight: 'bold' as 'bold',
+};
+
+export const styles = StyleSheet.create({
+  baseText: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
   container: {
     marginTop: 40,
     padding: 20,
   },
+  inputContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
+  },
+  inputLabel: {
+    marginRight: 10,
+    flexShrink: 1,
+  },
   input: {
+    width: '20%',
+    textAlign: 'right',
     height: 40,
     borderColor: 'gray',
     borderWidth: 1,
-    marginBottom: 10,
+    borderRadius: 10,
     padding: 10,
+    fontSize: 14,
+    backgroundColor: '#fff',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowRadius: 4,
+    shadowOpacity: 0.4,
+    elevation: 5,
   },
   tipAmountContainer: {
     flexDirection: 'row',
@@ -27,13 +55,7 @@ export default StyleSheet.create({
     elevation: 10,
     padding: 10,
   },
-  tipLabelText: {
-    fontSize: 18,
-    fontWeight: 'bold',
-  },
   tipAmountText: {
-    fontSize: 18,
-    fontWeight: 'bold',
     color: '#000',
     textAlign: 'right',
   },
@@ -50,8 +72,7 @@ export default StyleSheet.create({
     marginBottom: 20,
   },
   percentageText: {
-    fontSize: 16,
-    marginTop: 10,
+    marginTop: 60,
     marginBottom: 10,
   },
 });

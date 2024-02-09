@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput } from 'react-native';
 import Slider from '@react-native-community/slider';
-import styles from './TipCalculator.styles';
+import { baseTextStyle, styles } from './TipCalculator.styles';
 
 const TipCalculator: React.FC = () => {
   const [totalAmount, setTotalAmount] = useState<string>('');
@@ -23,14 +23,17 @@ const TipCalculator: React.FC = () => {
 
   return (
     <View style={styles.container}>
-      <TextInput
-        style={styles.input}
-        placeholder="Total Amount"
-        keyboardType="numeric"
-        value={totalAmount}
-        onChangeText={setTotalAmount}
-      />
-      <Text style={styles.percentageText}>
+      <View style={styles.inputContainer}>
+        <Text style={[baseTextStyle, styles.inputLabel]}>Total Amount:</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="0.00"
+          keyboardType="numeric"
+          value={totalAmount}
+          onChangeText={setTotalAmount}
+        />
+      </View>
+      <Text style={[baseTextStyle, styles.percentageText]}>
         Tip Percentage: {tipPercentage}%
       </Text>
       <View style={styles.sliderShadow}>
@@ -47,8 +50,10 @@ const TipCalculator: React.FC = () => {
         />
       </View>
       <View style={styles.tipAmountContainer}>
-        <Text style={styles.tipLabelText}>Tip Amount:</Text>
-        <Text style={styles.tipAmountText}>${calculateTip()}</Text>
+        <Text style={baseTextStyle}>Tip Amount:</Text>
+        <Text style={[baseTextStyle, styles.tipAmountText]}>
+          ${calculateTip()}
+        </Text>
       </View>
     </View>
   );
