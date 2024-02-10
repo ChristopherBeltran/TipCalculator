@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { View, Text, TextInput } from 'react-native';
 import Slider from '@react-native-community/slider';
 import { baseTextStyle, styles } from './TipCalculator.styles';
@@ -6,25 +6,34 @@ import { baseTextStyle, styles } from './TipCalculator.styles';
 const TipCalculator: React.FC = () => {
   const [totalAmount, setTotalAmount] = useState<string>('');
   const [tipPercentage, setTipPercentage] = useState<number>(15);
+  const [finalTotal, setFinalTotal] = useState<string>('0');
 
-  const calculateTip = (): string => {
-    if (!totalAmount) {
-      return '0';
-    }
-
+  const calculateTip = useCallback((): string => {
     const amount = parseFloat(totalAmount);
-
     if (isNaN(amount)) {
-      return '0';
+      return '0.00';
     }
+    const tip = (amount * tipPercentage) / 100;
 
-    return ((amount * tipPercentage) / 100).toFixed(2);
-  };
+    return tip.toFixed(2);
+  }, [totalAmount, tipPercentage]);
+
+  const calculateFinalTotal = useCallback((): void => {
+    const tipAmount = parseFloat(calculateTip());
+    const amount = parseFloat(totalAmount);
+    const finalAmount = isNaN(amount) ? 0 : amount + tipAmount;
+
+    setFinalTotal(finalAmount.toFixed(2));
+  }, [calculateTip, totalAmount]);
+
+  useEffect(() => {
+    calculateFinalTotal();
+  }, [calculateFinalTotal]);
 
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        <Text style={[baseTextStyle, styles.inputLabel]}>Total Amount:</Text>
+        <Text style={[baseTextStyle, styles.inputLabel]}>Bill Amount:</Text>
         <TextInput
           style={styles.input}
           placeholder="0.00"
@@ -57,6 +66,10 @@ const TipCalculator: React.FC = () => {
         <Text style={[baseTextStyle, styles.tipAmountText]}>
           ${calculateTip()}
         </Text>
+      </View>
+      <View style={styles.tipAmountContainer}>
+        <Text style={baseTextStyle}>Total Amount:</Text>
+        <Text style={[baseTextStyle, styles.tipAmountText]}>${finalTotal}</Text>
       </View>
     </View>
   );
