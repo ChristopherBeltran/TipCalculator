@@ -1,46 +1,82 @@
 {
   "images" : [
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Icon-40.png",
+>>>>>>> feature/v1.0
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Icon-60.png",
+>>>>>>> feature/v1.0
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Icon-58.png",
+>>>>>>> feature/v1.0
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Icon-87.png",
+>>>>>>> feature/v1.0
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Icon-80.png",
+>>>>>>> feature/v1.0
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Icon-120.png",
+>>>>>>> feature/v1.0
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Icon-120 1.png",
+>>>>>>> feature/v1.0
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Icon-180.png",
+>>>>>>> feature/v1.0
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
     },
     {
+<<<<<<< HEAD
+=======
+      "filename" : "Icon-1024.png",
+>>>>>>> feature/v1.0
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
