@@ -78,7 +78,10 @@ export const styles = StyleSheet.create({
     marginBottom: 8,
   },
   percentageValue: {
-    textAlign: 'center', // Center the percentage value below the slider
-    marginTop: 8, // Space below the slider
+    textAlign: 'center',
+    marginTop: 8,
+  },
+  totalAmountContainer: {
+    backgroundColor: '#B2DFDB',
   },
 });

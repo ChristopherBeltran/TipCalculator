@@ -35,7 +35,7 @@ const TipCalculator: React.FC = () => {
       <View style={styles.inputContainer}>
         <Text style={[baseTextStyle, styles.inputLabel]}>Bill Amount:</Text>
         <TextInput
-          style={styles.input}
+          style={[baseTextStyle, styles.input]}
           placeholder="0.00"
           keyboardType="numeric"
           value={totalAmount}
@@ -67,7 +67,7 @@ const TipCalculator: React.FC = () => {
           ${calculateTip()}
         </Text>
       </View>
-      <View style={styles.tipAmountContainer}>
+      <View style={[styles.tipAmountContainer, styles.totalAmountContainer]}>
         <Text style={baseTextStyle}>Total Amount:</Text>
         <Text style={[baseTextStyle, styles.tipAmountText]}>${finalTotal}</Text>
       </View>
