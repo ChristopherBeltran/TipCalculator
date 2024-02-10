@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     marginTop: 60,
-    backgroundColor: '#1fb28a',
+    backgroundColor: '#B2DFDB',
     borderWidth: 1,
     borderColor: '#FFA500',
     borderRadius: 10,
@@ -82,6 +82,6 @@ export const styles = StyleSheet.create({
     marginTop: 8,
   },
   totalAmountContainer: {
-    backgroundColor: '#B2DFDB',
+    backgroundColor: '#1fb28a',
   },
 });
